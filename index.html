@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10273d">
+  <meta name="description" content="比較台灣、南韓、中國、新加坡、日本、泰國、美國與澳洲的經濟、所得、年工時、房價與生活成本。">
+  <title>亞洲六國與美澳：經濟與生活成本</title>
+  <style>
+:root{color-scheme:light;--ink:#132940;--soft:#4f6478;--line:#dce5ee;--surface:#f1f5f9;--white:#fff;--mint:#116c65;--mint-bg:#e6f5f0;--navy:#10273d;--blue:#245f99;--radius:18px;--shadow:0 10px 28px rgba(26,55,85,.06);font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;font-size:16px;line-height:1.55;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--surface);color:var(--ink)}
+button,select{font:inherit;color:inherit}
+button{cursor:pointer}
+a{color:var(--mint);text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid #168e84;outline-offset:3px}
+[hidden]{display:none!important}
+.wrap{width:min(100% - 64px,1280px);margin-inline:auto}
+.topbar{background:#fff;border-bottom:1px solid #e0e8f0}
+.top-inner,.footer-inner{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:var(--ink);text-decoration:none;font-weight:800;display:inline-flex;align-items:center;gap:11px;letter-spacing:.03em;white-space:nowrap}
+.mark{width:31px;height:31px;background:#153e55;border-radius:9px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:7px;gap:3px}
+.mark i{display:block;width:3px;border-radius:3px;background:#77e1cd;height:6px}.mark i:nth-child(2){height:11px}.mark i:nth-child(3){height:16px}
+nav{display:flex;gap:29px;font-size:.92rem;white-space:nowrap}nav a{color:var(--soft);text-decoration:none;font-weight:650}nav a:hover{color:var(--mint)}
+.hero{color:white;background:radial-gradient(ellipse at 90% 48%,#145b67 0%,transparent 54%),linear-gradient(104deg,#0e2238,#153c53);overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;inset:0 0 0 48%;background:linear-gradient(#b6edee18 1px,transparent 1px),linear-gradient(90deg,#b6edee18 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(90deg,transparent,#000 78%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding:46px 0 79px}
+.hero-period{margin:0 0 14px;color:#cef3ee;display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:.9rem;font-weight:650;letter-spacing:.02em}
+.hero-period>span:first-child{background:#83e6ce;width:7px;height:7px;border-radius:99px;flex:none}.hero-separator{height:14px;width:1px;background:#a5d6d88f;margin-inline:3px}
+h1,h2,h3,p{margin-top:0}
+h1{font-size:clamp(2rem,4vw,3.6rem);line-height:1.13;letter-spacing:-.04em;margin-bottom:16px;font-weight:850}
+.hero-copy{color:#d5e3eb;font-size:1.04rem;line-height:1.7;margin-bottom:0}
+.mobile-break{display:none}
+.content{position:relative;margin-top:-43px;padding-bottom:38px;display:grid;gap:25px;z-index:2}
+.quick-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.quick{background:var(--white);min-width:0;border:1px solid var(--line);border-radius:15px;padding:16px 18px 13px;text-align:left;box-shadow:var(--shadow);display:grid;gap:4px;transition:background .15s,border-color .15s}
+.quick:hover,.quick:focus-visible{background:#f8fffc;border-color:#87bfb3}.quick-name{color:var(--soft);font-size:.88rem;font-weight:700}.quick strong{font-variant-numeric:tabular-nums;font-size:clamp(1.54rem,2.65vw,2.24rem);line-height:1.22;letter-spacing:-.038em}.quick strong small{font-size:.91rem;font-weight:650;letter-spacing:0;color:var(--soft)}.quick-link{margin-top:2px;color:var(--mint);font-size:.87rem;font-weight:700}
+.card{border:1px solid var(--line);background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);scroll-margin-top:16px;min-width:0}
+.section-head{padding:24px 25px 19px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.section-head h2{font-size:1.45rem;margin:0 0 3px;letter-spacing:-.025em;line-height:1.3}.section-head p{margin:0;color:var(--soft);font-size:.94rem}
+.utility{background:white;border:1px solid #c6d5e3;border-radius:9px;padding:8px 12px;font-size:.88rem;font-weight:750;min-height:40px;white-space:nowrap}.utility:hover{background:#ebf6f3;border-color:#9bc8bc}
+.controls{background:#f7fafc;border-block:1px solid var(--line);padding:13px 25px;display:grid;gap:11px}
+.control-row,.control-options,.filters{display:flex;align-items:center;flex-wrap:wrap;gap:7px}.modes{justify-content:space-between;gap:12px}.control-options{gap:14px}.control-options label{display:flex;align-items:center;gap:7px;color:var(--soft);font-size:.88rem;font-weight:700}
+select{appearance:none;background:linear-gradient(45deg,transparent 50%,#426581 50%) calc(100% - 13px) center/5px 5px no-repeat,linear-gradient(135deg,#426581 50%,transparent 50%) calc(100% - 8px) center/5px 5px no-repeat,#fff;border:1px solid #cbd8e4;border-radius:8px;padding:6px 24px 6px 9px;min-height:36px;font-size:.88rem;font-weight:650;color:var(--ink)}
+.segment{display:inline-flex;border:1px solid var(--line);border-radius:10px;padding:3px;background:#eaf0f6;gap:3px}.segment button{background:transparent;border:1px solid transparent;padding:5px 12px;border-radius:7px;font-weight:750;font-size:.9rem;white-space:nowrap;min-height:34px;color:var(--soft)}.segment button[aria-pressed=true]{background:#fff;color:var(--ink);border-color:#d8e2ed;box-shadow:0 1px 3px #23445915}
+.indicators button,.filters button{background:#fff;border:1px solid #d5e1eb;border-radius:8px;padding:6px 11px;font-size:.88rem;font-weight:700;min-height:36px;white-space:nowrap;color:#36516a}.indicators button[aria-pressed=true]{background:#163e52;color:white;border-color:#163e52}.indicators button:not([aria-pressed=true]):hover,.filters button:hover{border-color:#79ab9f}.filters button{border-radius:99px;padding:3px 10px;min-height:32px}.filters button[aria-pressed=true]{background:var(--mint-bg);border-color:#a1cfc3;color:#0d645b}.filter-label{font-size:.88rem;color:var(--soft);font-weight:750;margin-right:3px}.plain{border:0;background:transparent;color:var(--mint);padding:5px;font-size:.86rem;font-weight:700;text-decoration:underline;text-underline-offset:.16em}
+.analysis-grid{padding:21px 25px;display:grid;grid-template-columns:minmax(0,2.25fr) minmax(235px,1fr);gap:24px;align-items:start}
+.chart-panel{min-width:0}.chart-heading{display:flex;justify-content:space-between;align-items:start;gap:8px;margin-bottom:13px}.chart-heading h3,.context h3{margin:0 0 3px;font-size:1.23rem;line-height:1.3}.chart-heading p{margin:0;color:var(--soft);font-size:.89rem}.tag{font-size:.86rem;white-space:nowrap;padding:3px 9px;border-radius:99px;color:#345571;background:#eef3f8;font-weight:700}
+.chart-list{display:grid;gap:7px;list-style:none;margin:0;padding:0}.chart-row{display:grid;grid-template-columns:4.65rem minmax(0,1fr) minmax(5.9rem,auto);gap:9px;align-items:center;min-height:29px;font-size:.9rem}.chart-name{font-weight:750}.chart-value{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:750}.track{height:16px;border-radius:4px;background:#edf2f6;position:relative;overflow:hidden}.bar,.bar-range{position:absolute;inset:0 auto 0 0;width:var(--width);border-radius:4px;background:linear-gradient(90deg,#2d669a,#3886a5)}.chart-row[data-country=tw] .bar,.chart-row[data-country=tw] .bar-range{background:linear-gradient(90deg,#167c71,#36a493)}.bar-range{left:var(--start);background:repeating-linear-gradient(135deg,#60a7c3 0 4px,#9bd1e0 4px 8px)}.bar-split{position:absolute;top:0;bottom:0;left:var(--start);width:var(--width);border-radius:3px;background:#80adca}.chart-empty{color:var(--soft);background:var(--surface);padding:20px;border-radius:12px;margin:0}.chart-note{margin:12px 0 0;color:var(--soft);font-size:.88rem;line-height:1.55}
+.context{background:#ecf6f4;border:1px solid #d4ebe5;border-radius:13px;min-height:100%;color:#16443f}.context-inner{padding:17px 17px 15px}.context-label{font-size:.87rem;font-weight:750;letter-spacing:.02em;color:#246e63;margin:0 0 8px}.context h3{font-size:1.1rem;margin-bottom:7px}.context p:not(.context-label){font-size:.92rem;margin-bottom:12px;line-height:1.66}.context a{font-size:.88rem;font-weight:750}
+.table-wrap{overflow-x:auto;position:relative;scrollbar-color:#a6b9cc transparent;max-width:100%}.data-table{width:100%;border-collapse:collapse;min-width:730px;color:var(--ink);font-size:.9rem;font-variant-numeric:tabular-nums}.data-table th,.data-table td{padding:10px 15px;text-align:left;border-bottom:1px solid #e6edf3;white-space:nowrap}.data-table th:first-child,.data-table td:first-child{padding-left:25px}.data-table th:last-child,.data-table td:last-child{padding-right:25px}.data-table thead th{background:#eff4f8;color:#45617a;line-height:1.45;font-weight:750;border-top:1px solid var(--line)}.data-table tbody tr:hover{background:#f2faf6}.data-table tbody th{font-weight:750}.data-table .number{text-align:right}.data-table .source a{display:inline-flex;font-weight:700}.data-table .active-col{background:#e5f3f1;color:#155f57}.data-table td.active-col{background:#f1f9f7;font-weight:800}.data-table .details-cell{white-space:normal;min-width:220px}.data-table .empty-cell{text-align:center;padding:20px;color:var(--soft)}
+.table-foot{padding:11px 25px 15px;color:var(--soft);font-size:.88rem;margin:0}.table-foot a{margin-left:8px;font-weight:700}.basket-table{min-width:570px}.basket .section-head{padding-bottom:17px}
+.baseline-marker{position:absolute;inset:0 auto 0 var(--start);z-index:1;width:0;border-left:2px dashed #1c3e57;opacity:.65;transform:translateX(-1px)}
+.data-table .relative-value{display:block;color:var(--mint);font-size:.8rem;font-weight:650;line-height:1.3;margin-top:3px}
+.data-table tr[data-benchmark=true] th[scope=row]{color:var(--mint)}
+.base-section{display:grid;gap:16px;min-width:0;scroll-margin-top:16px}.base-subtitle{padding:0 25px;margin:2px 0 8px;font-size:1.03rem}.base-currency{font-size:.88rem;font-weight:700;white-space:nowrap;color:var(--soft)}
+.data-vintage{display:block;font-size:.78rem;color:var(--soft);margin-top:3px}
+.data-table.domestic-housing{min-width:0}
+.difficulty-table{min-width:970px}.difficulty-table .burden-over{color:#9a4530;font-weight:750}.difficulty-index{font-weight:800;color:var(--mint)}.difficulty-track{display:block;width:5rem;height:4px;margin:5px 0 0 auto;border-radius:4px;background:#e3ecf1;overflow:hidden}.difficulty-track>span{display:block;height:100%;border-radius:4px;background:#378f87}.difficulty-method{padding:0 25px 7px;color:var(--soft);font-size:.91rem}.difficulty-method p{margin:0 0 .75rem}.difficulty-method .difficulty-source-links{display:flex;gap:.35rem .8rem;flex-wrap:wrap}.difficulty-method a{font-weight:700}
+@media(max-width:690px){.difficulty-method{padding-inline:13px}}
+.basket .section-head h3,#difficulty .section-head h2{margin:0 0 3px;font-size:1.32rem}.basket-controls p{margin:0;color:var(--soft);font-size:.88rem}.basket-table{min-width:780px}.basket-detail{border-block:1px solid var(--line)}.basket-detail summary{padding:12px 25px;cursor:pointer;font-weight:750;color:var(--mint)}.basket-items{min-width:1150px}.basket-total{font-weight:800;color:#174d48}.basket-burden{font-weight:750;color:#245f99}#basket-insight{padding-bottom:12px;font-weight:650;color:#16443f}
+@media(max-width:690px){.basket-detail summary{padding-inline:13px}}
+@media(max-width:690px){.base-subtitle{padding-inline:13px}.base-section{gap:12px}.base-currency{display:grid;gap:3px}}
+.method .section-head{padding-bottom:12px}.method details{border-top:1px solid var(--line);padding:0 25px;scroll-margin-top:16px}.method summary{color:var(--ink);font-weight:750;padding:13px 0;cursor:pointer}.method details p{color:var(--soft);margin:0 0 10px;max-width:104ch}.method details ul{margin:0 0 18px;padding-left:20px;display:flex;flex-wrap:wrap;gap:4px 28px}.method details li::marker{color:#377a72}
+.footer{border-top:1px solid #dce5ee;background:#fff;color:var(--soft);font-size:.89rem}.footer a{text-decoration:none;font-weight:700}
+.skip,.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.skip:focus{width:auto;height:auto;clip-path:none;z-index:5;top:10px;left:10px;padding:8px;background:#fff}
+@media(max-width:950px){.wrap{width:calc(100% - 40px)}.analysis-grid{grid-template-columns:minmax(0,1.9fr) minmax(200px,1fr);gap:15px}.quick{padding-inline:12px}.quick-grid{gap:10px}.desktop-break{display:none}}
+@media(max-width:690px){.wrap{width:calc(100% - 26px)}.top-inner{min-height:56px}.top-inner nav{gap:9px;font-size:.76rem}.brand{font-size:.86rem;gap:6px}.mark{width:25px;height:25px;padding-bottom:5px}.hero-inner{padding:31px 0 66px}.hero-period{font-size:.83rem;gap:6px}.hero-copy{font-size:.95rem}.mobile-break{display:initial}.content{gap:16px;margin-top:-43px}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.quick{padding:10px 11px}.quick strong{font-size:1.56rem}.quick strong small,.quick-link,.quick-name{font-size:.83rem}.section-head,.controls,.analysis-grid{padding-left:13px;padding-right:13px}.section-head{padding-top:16px;padding-bottom:13px;align-items:flex-start}.section-head h2{font-size:1.3rem}.section-head p{font-size:.88rem}.chart-heading h3{font-size:1.15rem}.analysis-grid{grid-template-columns:1fr;padding-top:16px;padding-bottom:16px}.chart-row{grid-template-columns:3.25rem minmax(0,1fr) minmax(5.4rem,auto);gap:6px}.context-inner{padding:12px}.table-foot,.method details{padding-inline:13px}.data-table th:first-child,.data-table td:first-child{position:sticky;left:0;z-index:1;background:#fff;padding-left:13px;box-shadow:1px 0 #dbe5ec}.data-table thead th:first-child{background:#eff4f8}.data-table th,.data-table td{padding-inline:10px}.footer-inner{min-height:63px;flex-wrap:wrap;gap:5px 10px;padding-block:10px}.utility{padding-inline:7px}.basket .segment button{padding-inline:7px}}
+@media(max-width:365px){.brand .mark{display:none}.top-inner nav{gap:8px}.section-head{flex-wrap:wrap}.controls{gap:8px}}
+.group-nav{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem;font-weight:700}.group-nav a{text-decoration:none}.group-nav a:hover{text-decoration:underline}
+.group{padding:22px 25px 24px;border-top:1px solid var(--line);scroll-margin-top:16px}.group:first-child{border-top:0}.group-head h3{margin:0 0 4px;font-size:1.22rem;letter-spacing:-.02em}.group-head p{margin:0;color:var(--soft);font-size:.92rem;max-width:80ch}
+.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:15px}
+.chart-card{border:1px solid var(--line);border-radius:14px;padding:16px 16px 10px;display:grid;gap:9px;align-content:start;min-width:0;scroll-margin-top:16px;background:#fff}
+.card-kicker{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:.8rem;color:var(--soft);font-weight:700}
+.direction{white-space:nowrap;border-radius:99px;padding:2px 9px;font-size:.78rem;font-weight:750}.direction.up{background:#e6f5f0;color:#0d645b}.direction.down{background:#fbeee9;color:#9a4530}.direction.flat{background:#eef3f8;color:#345571}
+.chart-sub{display:block;font-size:.72rem;color:var(--soft);font-weight:650;line-height:1.15}
+.chart-card h4{margin:0;font-size:1.14rem;line-height:1.3;letter-spacing:-.015em}
+.meaning{margin:0;font-weight:750;color:var(--ink);font-size:.96rem;line-height:1.5}.meaning b{color:var(--mint)}
+.read{margin:0;color:var(--soft);font-size:.89rem;line-height:1.6}
+.chart-unit{margin:2px 0 0;font-size:.8rem;color:var(--soft);font-weight:650}
+.takeaway{margin:2px 0 0;background:#ecf6f4;color:#16443f;border-radius:9px;padding:8px 11px;font-size:.88rem;font-weight:650;line-height:1.55}.takeaway strong{margin-right:6px;color:#246e63}
+.card-detail{border-top:1px solid var(--line);margin-top:2px}.card-detail summary{padding:9px 0 4px;cursor:pointer;font-size:.86rem;font-weight:750;color:var(--mint)}.card-note{font-size:.84rem;color:var(--soft);margin:4px 0 8px;line-height:1.6}.card-copy{font-size:.86rem;color:var(--ink);margin:4px 0 0;line-height:1.6}
+.data-table.mini-table{min-width:520px;font-size:.84rem}.chart-card .data-table th:first-child,.chart-card .data-table td:first-child{padding-left:8px}.chart-card .data-table th:last-child,.chart-card .data-table td:last-child{padding-right:8px}.mini-table th,.mini-table td{padding:8px 8px}.mini-table .details-cell{min-width:180px}
+@media(max-width:950px){.chart-grid{grid-template-columns:1fr}}
+@media(max-width:690px){.group{padding:18px 13px}.chart-card{padding:13px 12px 8px}}
+.pillar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;padding:0 25px 16px}.pillar{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:#fbfcfd;display:grid;gap:3px;align-content:start}.pillar b{font-size:.98rem}.pillar span{font-size:.84rem;color:var(--soft);line-height:1.5}.pillar em{font-style:normal;font-size:.78rem;color:#245f99;font-weight:700}
+.weight-label{font-size:.88rem;color:var(--soft);font-weight:700}.weight-group{display:flex;flex-wrap:wrap;gap:6px 12px}.weight-group label{gap:5px}
+.hs-chart{padding:18px 25px 6px;display:grid;gap:7px}.hs-row{display:grid;grid-template-columns:5.4rem minmax(0,1fr) 3.2rem;gap:10px;align-items:center;min-height:30px;font-size:.92rem}.hs-name{font-weight:750;line-height:1.2}.hs-name small{display:block;font-size:.74rem;color:var(--soft);font-weight:650}.hs-value{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}.hs-row .track{height:18px}.hs-row .bar.harder{background:linear-gradient(90deg,#c8714d,#b0553a)}.hs-row .bar.easier{background:linear-gradient(90deg,#167c71,#36a493)}.hs-row .bar.base{background:linear-gradient(90deg,#2d669a,#3886a5)}.hs-row[data-benchmark=true] .hs-name{color:var(--mint)}
+.hs-summary{font-weight:650;color:#16443f;padding-top:6px}.hs-subtitle{margin-top:8px}
+.score{display:block;font-weight:800;font-size:.98rem}.score-up{color:#9a4530}.score-down{color:#0d645b}.score-base{color:var(--ink)}.raw{display:block;color:var(--soft);font-size:.78rem;font-weight:600;margin-top:2px}.driver{white-space:normal;min-width:150px;font-size:.86rem}
+.difficulty-table{min-width:880px}
+@media(max-width:950px){.pillar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:690px){.pillar-grid{padding-inline:13px;gap:8px}.hs-chart{padding-inline:13px}.hs-row{grid-template-columns:4.4rem minmax(0,1fr) 2.8rem;gap:7px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+  <a class="skip" href="#compare">跳至指標比較</a>
+  <header class="topbar">
+    <div class="wrap top-inner">
+      <a class="brand" href="#top" aria-label="亞洲經濟比較首頁"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>亞洲經濟比較</a>
+      <nav aria-label="頁面導覽"><a href="#difficulty">困難指數</a><a href="#compare">比較圖表</a><a href="#baseline-data">基礎統計</a><a href="#method">統計口徑</a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="wrap hero-inner">
+        <p class="hero-period"><span></span>2025 年經濟資料<span class="hero-separator"></span>2026 年中城市指標</p>
+        <h1 id="page-title">亞洲六國與美澳<br class="mobile-break">經濟與生活成本</h1>
+        <p class="hero-copy">以台北＝100，綜合低薪、高房價、高物價、高工時，評估亞洲十一個城市與舊金山、雪梨的生活困難程度；<br class="desktop-break">並以台灣為基準，比較八國的所得、薪資、工時與物價。</p>
+      </div>
+    </section>
+
+    <div class="wrap content">
+      <section class="quick-grid" id="hardship-cards" aria-label="生活困難指數重點"></section>
+
+      <article class="card basket" id="difficulty" aria-labelledby="difficulty-title">
+        <div class="section-head">
+          <div><h2 id="difficulty-title">生活困難指數</h2><p>把<strong>低薪、高房價、高物價、高工時</strong>合成一個分數。台北＝100，數值越高，在當地生活越吃力；200 代表約是台北的兩倍辛苦，80 代表比台北輕鬆約兩成。</p></div>
+          <div class="segment" role="group" aria-label="比較層級" id="hardship-view"><button type="button" aria-pressed="true" data-view="city">城市</button><button type="button" aria-pressed="false" data-view="country">國家</button></div>
+        </div>
+        <div class="pillar-grid" id="pillar-legend"></div>
+        <div class="controls basket-controls">
+          <div class="control-row control-options">
+            <label for="hardship-housing">房價怎麼算<select id="hardship-housing"><option value="both">買房與租屋並計</option><option value="buy">只看買房（房價所得比）</option><option value="rent">只看租屋（租金占月薪）</option></select></label>
+            <span class="weight-label">權重</span><span class="weight-group" id="hardship-weights"></span>
+          </div>
+        </div>
+        <div class="hs-chart" id="hardship-chart" aria-live="polite"></div>
+        <p class="table-foot hs-summary" id="hardship-summary"></p>
+        <h4 class="base-subtitle hs-subtitle">為什麼是這個分數：四個面向拆解</h4>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="可橫向捲動的生活困難指數拆解表">
+          <table class="data-table difficulty-table"><caption class="sr-only">生活困難指數與四個面向分數</caption><thead id="hardship-head"></thead><tbody id="hardship-body"></tbody></table>
+        </div>
+        <p class="table-foot">每格大字為該面向分數（台北＝100），<span class="score-up">紅色</span>代表比台北辛苦，<span class="score-down">綠色</span>代表比台北輕鬆；小字為原始數值。</p>
+        <details class="basket-detail" id="difficulty-method"><summary>計算方式、限制與資料來源</summary><div class="difficulty-method">
+          <p><strong>四個面向，各自以台北＝100：</strong>低薪＝台北稅後月薪 ÷ 當地稅後月薪（皆換成新台幣）。高房價＝當地住房占薪資的比重 ÷ 台北同一比重；買房用「非市中心 60 m² 房價 ÷ 稅後年薪」，租屋用「非市中心一房月租 ÷ 稅後月薪」，並計時取兩者的幾何平均。高物價＝混合外食月消費籃 ÷ 稅後月薪，再除以台北同一比重。高工時＝全國平均年工時 ÷ 台灣。</p>
+          <p><strong>合成方式：</strong>綜合指數＝四個面向的加權幾何平均，預設權重相同。用幾何平均而不是相加平均，是因為各面向都是「相對台北的倍數」：某城市薪水是台北的一半、物價占薪資卻是兩倍，兩者效果對稱；而且單一面向不能把其他面向完全抵銷。聯合國人類發展指數也用同樣的作法。</p>
+          <p><strong>為什麼房價和物價要除以薪水：</strong>同一碗麵，月薪 2 萬和 6 萬的人感受不同。住房和物價都以「占當地薪資的比重」計算，低薪的影響就反映在這兩個面向。「低薪」面向另外反映換成台幣後的薪資高低，也就是買進口商品、出國或存外幣時的吃力程度。</p>
+          <p><strong>城市薪資：</strong>13 個城市統一採<strong>官方統計的城市受僱者平均月薪（含獎金）</strong>，再依當地稅制，以單身、無扶養估算扣除所得稅與勞工自付社會保險後的稅後月薪。平均數是唯一每個城市都有官方數字的口徑；中國、日本都道府縣與曼谷沒有官方城市中位數。平均會被高薪族拉高，貧富差距越大的城市拉高越多，例如舊金山、上海、台北。台灣、東京、雪梨與首爾只含全時或常用勞工；中國城鎮單位、新加坡與曼谷涵蓋全體受僱者，但部分工時比例低。中國的社保與住房公積金一律以個人 17.5% 計（養老 8%、醫療 2%、失業 0.5%、公積金 7%），新加坡扣除員工公積金 20%，兩者實際上是強制儲蓄。各城市的稅後估算見下表。</p>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="可橫向捲動的城市薪資來源表"><table class="data-table" id="pay-table"></table></div>
+          <p><strong>限制：</strong>房價、租金與物價仍是 Numbeo 群眾回報的樣本。薪資年份介於 2024 至 2025 年，台灣與東京為 2024 年，會略為低估。成都、北京與雪梨的薪資為推算值。工時是全國數字，同國城市相同。國家分數是該國列入城市的幾何平均，台灣含三城、中國含四城，其餘國家只有一個城市。澳洲與美國的工時含部分工時者，雪梨與舊金山的「高工時」分數會偏低。結果適合看大致排序與壓力來源，不宜解讀到個位數。</p>
+          <p class="difficulty-source-links" id="difficulty-sources"></p>
+        </div></details>
+      </article>
+
+      <section class="base-section" id="compare" aria-labelledby="compare-title">
+      <article class="workspace card">
+        <div class="section-head">
+          <div><h2 id="compare-title">比較圖表</h2><p>一張圖只比一件事。國家以台灣＝100%，城市以台北＝100%。</p></div>
+          <button class="utility" type="button" id="export">下載比較 CSV</button>
+        </div>
+        <div class="controls">
+          <div class="control-row modes">
+            <div class="control-row filter-row"><span class="filter-label">篩選國家</span><div id="filters" class="filters" role="group" aria-label="篩選國家"></div><button class="plain" type="button" id="reset">恢復全部</button></div>
+            <div class="control-options">
+              <label for="chart-view">圖表<select id="chart-view"><option value="relative">相對基準</option><option value="raw">原始數值</option></select></label>
+              <label for="sort">排序<select id="sort"><option value="desc">數值由高到低</option><option value="asc">數值由低到高</option><option value="region">依國家順序</option></select></label>
+            </div>
+          </div>
+          <nav class="group-nav" aria-label="圖表主題" id="group-nav"></nav>
+        </div>
+        <div id="chart-groups"></div>
+      </article>
+
+      <article class="card basket" id="basket" aria-labelledby="basket-title">
+        <div class="section-head">
+          <div><h3 id="basket-title">民生日常消費</h3><p>比較固定用量的月支出、各類價格，以及消費籃占當地稅後薪資的比率。</p></div>
+          <div class="segment" role="group" aria-label="日常物價幣別" id="basket-currency"><button type="button" aria-pressed="true" data-basket="twd">新台幣</button><button type="button" aria-pressed="false" data-basket="local">當地幣</button></div>
+        </div>
+        <div class="controls basket-controls">
+          <div class="control-row modes">
+            <div class="segment" role="group" aria-label="消費情境" id="basket-profile"><button type="button" aria-pressed="true" data-profile="mixed">混合外食</button><button type="button" aria-pressed="false" data-profile="home">偏自炊</button><button type="button" aria-pressed="false" data-profile="dine">偏外食</button></div>
+            <div class="control-options"><label for="basket-region">城市範圍<select id="basket-region"><option value="all">全部城市</option><option value="tw">台北、台中、高雄</option></select></label><label for="basket-sort">排序<select id="basket-sort"><option value="region">依城市</option><option value="cost">月支出由低到高</option><option value="burden">薪資占比由低到高</option></select></label></div>
+          </div>
+          <p id="basket-quantities" aria-live="polite"></p>
+        </div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="可橫向捲動的月消費籃比較表">
+          <table class="data-table basket-table"><caption class="sr-only">城市月消費籃支出與負擔</caption><thead><tr><th scope="col">城市</th><th class="number" scope="col">外食</th><th class="number" scope="col">食材</th><th class="number" scope="col">交通</th><th class="number" scope="col">水電網路</th><th class="number" scope="col">月支出合計</th><th class="number" scope="col">占當地稅後月均薪</th></tr></thead><tbody id="basket-body"></tbody></table>
+        </div>
+        <p class="table-foot" id="basket-insight" aria-live="polite"></p>
+        <details class="basket-detail"><summary>逐項單價、稅後月均薪與來源</summary><div class="table-wrap" tabindex="0" role="region" aria-label="可橫向捲動的單價明細"><table class="data-table basket-items" id="basket-items"></table></div></details>
+        <p class="table-foot">每項價格與月支出以台北為 100%。消費籃僅涵蓋列出的品項，含一份約 85 平方公尺公寓的帳單。購屋負擔可在城市比較查看房價所得比。價格取自 2026/11/24 查閱的 Numbeo 城市樣本，台幣金額按 2025 年平均匯率換算。</p>
+      </article>
+      </section>
+
+      <section class="base-section" id="baseline-data" aria-labelledby="baseline-title">
+        <article class="card">
+          <div class="section-head"><div><h2 id="baseline-title">基礎統計資料</h2><p>上方圖表使用的原始數值：八國統計，以及主要城市的房價與物價指數。</p></div><label class="base-currency" for="currency">薪資幣別 <select id="currency"><option value="twd">新台幣</option><option value="local">當地幣</option></select></label></div>
+          <h3 class="base-subtitle">國家統計</h3>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="可橫向捲動的國家統計表"><table class="data-table" id="base-countries"><caption class="sr-only">八國基礎統計資料</caption></table></div>
+          <p class="table-foot">人均 GDP 與人均 GNI 為 2025 年，薪資與工時按各地統計期間及口徑列示。<a href="#method">資料來源與口徑</a></p>
+          <h3 class="base-subtitle">主要城市統計</h3>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="可橫向捲動的城市統計表"><table class="data-table" id="base-cities"><caption class="sr-only">主要城市基礎統計資料</caption></table></div>
+          <p class="table-foot">2026 年中 Numbeo 資料。住宅購買負擔採房價所得比，日常物價與購買力的原始指數以紐約＝100。</p>
+          <h3 class="base-subtitle" id="tw-housing">台北、台中、高雄購屋負擔</h3>
+          <div class="table-wrap" tabindex="0" role="region" aria-labelledby="tw-housing">
+            <table class="data-table domestic-housing"><caption class="sr-only">台灣三城官方房價所得比</caption><thead><tr><th scope="col">城市</th><th class="number" scope="col">房價所得比</th><th class="number" scope="col">台北＝100%</th></tr></thead><tbody id="domestic-housing-body"></tbody></table>
+          </div>
+          <p class="table-foot">2026 年第 1 季內政部統計，以住宅價格中位數除以家戶可支配所得中位數。<a href="https://pip.moi.gov.tw/Publicize/Info/E1050" target="_blank" rel="noopener noreferrer">官方資料</a></p>
+        </article>
+      </section>
+
+      <section class="card method" id="method" aria-labelledby="method-title">
+        <div class="section-head"><div><h2 id="method-title">統計口徑與來源</h2><p>跨國比較時，先確認樣本範圍、年度與估算方式。</p></div></div>
+        <div id="method-list"></div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>亞洲六國與美澳：經濟與生活成本</span><span>資料整理於 2026/11/24</span><a href="#top">回到頁首</a></div></footer>
+  <noscript><p class="wrap">請啟用 JavaScript，使用互動比較與資料表。</p></noscript>
+<script>
+"use strict";
+
+const sources = {
+  gdpPc: ["IMF 世界經濟展望人均 GDP", "https://www.imf.org/external/datamapper/NGDPDPC@WEO"],
+  gdpPc2025: ["2025 年人均 GDP 表（IMF 資料轉載）", "https://www.worldometers.info/gdp/gdp-by-country/imf-2025-nominal-worldwide/"],
+  gni: ["世界銀行 GNI", "https://data.worldbank.org/indicator/NY.GNP.MKTP.CD"],
+  population: ["世界銀行人口", "https://data.worldbank.org/indicator/SP.POP.TOTL"],
+  twGni: ["台灣央行 2025 年報", "https://www.cbc.gov.tw/dl-225821-d2da34b6f2a041be96d7a0b049ea945b.html"],
+  twAvg: ["台灣主計總處平均薪資", "https://www.dgbas.gov.tw/News_Content.aspx?n=3602&s=235863"],
+  twMed: ["台灣主計總處 2024 年薪資中位數", "https://ws.dgbas.gov.tw/001/Upload/463/relfile/10980/235514/113%E5%B9%B4%E5%8F%97%E5%83%B1%E5%93%A1%E5%B7%A5%E8%96%AA%E8%B3%87%E4%B8%AD%E4%BD%8D%E6%95%B8%E7%B5%B1%E8%A8%88%E7%B5%90%E6%9E%9C%E6%96%B0%E8%81%9E%E7%A8%BF.pdf"],
+  twRelease: ["2025 年台灣薪資中位數發布公告", "https://www.dgbas.gov.tw/News_Content.aspx?n=3601&s=236852"],
+  krWage: ["南韓國家資料處", "https://mods.go.kr/board.es?act=view&bid=11113&list_no=443648&mid=a10301010000"],
+  cnWage: ["中國國家統計局 2025 年城鎮工資", "https://www.stats.gov.cn/sj/zxfb/202605/t20260515_1963707.html"],
+  cnIncome: ["中國國家統計局居民所得", "https://www.stats.gov.cn/sj/zxfb/202601/t20260119_1962321.html"],
+  sgAvg: ["新加坡統計局平均薪資", "https://data.gov.sg/datasets/d_5d2a513a20f58239f8c449ea6c9b6ecd/view"],
+  sgMed: ["新加坡人力部就業調查", "https://stats.mom.gov.sg/iMAS_PdfLibrary/mrsd-labour-force-in-singapore-advance-release-2025.pdf"],
+  jpWage: ["日本國稅廳民間薪資統計", "https://www.nta.go.jp/publication/statistics/kokuzeicho/minkan2025/pdf/2025_001.pdf"],
+  usSfMed: ["美國勞工統計局 舊金山都會區職業薪資 2025 年 5 月", "https://www.bls.gov/regions/west/news-release/occupationalemploymentandwages_sanfrancisco.htm"],
+  auAwe: ["澳洲統計局平均每週收入 2025 年 5 月", "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/may-2025"],
+  auEe: ["澳洲統計局受僱者收入 2025 年 8 月", "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/employee-earnings/aug-2025"],
+  auHours: ["OECD 每位就業者平均年實際工時（澳洲 2024）", "https://data-explorer.oecd.org/vis?df%5Bag%5D=OECD.ELS.SAE&df%5Bds%5D=dsDisseminateFinalDMZ&df%5Bid%5D=DSD_HW%40DF_AVG_ANN_HRS_WKD"],
+  twCityPay: ["台灣主計總處 113 年縣市全年總薪資（工商時報整理）", "https://www.ctee.com.tw/news/20251126700077-430104"],
+  krSeoulPay: ["南韓雇用勞動部 2025 年 4 月市道別薪資調查（世界日報韓國版）", "https://www.segye.com/newsView/20250930516660"],
+  cnShPay: ["上海人社局 2026 年度社保繳費基數通告（第一財經）", "https://www.yicai.com/news/103408213.html"],
+  cnBjPay: ["北京 2026 年社保繳費基數（北京日報）", "https://news.bjd.com.cn/2026/06/15/11807327.shtml"],
+  cnCdPay: ["成都 2025 年城鎮單位平均工資（騰訊新聞）", "https://news.qq.com/rain/a/20260708A0AQSU00"],
+  cnQdPay: ["青島市統計局 2025 年單位就業人員平均工資", "http://qdtj.qingdao.gov.cn/tongjisj/zxfbyjd/202607/t20260703_10651659.shtml"],
+  jpTokyoPay: ["日本厚生勞動省 2024 年賃金構造基本統計調查", "https://www.mhlw.go.jp/toukei/itiran/roudou/chingin/kouzou/z2024/dl/14.pdf"],
+  usSfMean: ["美國勞工統計局 舊金山都會區職業薪資 2025 年 5 月", "https://www.bls.gov/regions/west/news-release/2026/occupationalemploymentandwages_sanfrancisco_20260709.htm"],
+  auNswPay: ["澳洲統計局平均每週收入 2025 年 5 月", "https://www.abs.gov.au/statistics/labour/earnings-and-working-conditions/average-weekly-earnings-australia/may-2025"],
+  usAwi: ["美國社會安全局全國平均工資指數 2025", "https://www.ssa.gov/oact/cola/AWI.html"],
+  usMed: ["美國勞工統計局全職受僱者週薪中位數 2025", "https://www.bls.gov/news.release/archives/wkyeng_01282026.htm"],
+  usHours: ["OECD 每位就業者平均年實際工時", "https://data-explorer.oecd.org/vis?df%5Bag%5D=OECD.ELS.SAE&df%5Bds%5D=dsDisseminateFinalDMZ&df%5Bid%5D=DSD_HW%40DF_AVG_ANN_HRS_WKD"],
+  thBkkWage: ["泰叻報：曼谷受僱者平均薪資（轉述泰國國家統計局）", "https://www.thairath.co.th/scoop/theissue/2949366"],
+  thWage: ["泰國國家統計局勞動力調查", "https://www.nso.go.th/nsoweb/storage/survey_detail/2026/20260223141532_13518.pdf"],
+  hours: ["台灣勞動部國際勞動統計表 6-2", "https://statdb.mol.gov.tw/html/nat/table6.2.pdf"],
+  krHours: ["南韓雇用勞動部事業體勞動力調查 2025 年常用勞工工時（韓國經濟新聞轉載）", "https://www.hankyung.com/article/2026032281801"],
+  jpHours: ["日本厚生勞動省每月勤勞統計 2025 年平均", "https://www.mhlw.go.jp/toukei/itiran/roudou/monthly/r07/25cr/dl/sankou25cr.pdf"],
+  cnHours: ["中國國家統計局週工時", "https://www.stats.gov.cn/sj/xwfbh/fbhwd/202601/t20260119_1962330.html"],
+  thHours: ["泰國 ILOSTAT 資料轉載", "https://invokely.ai/en/average-weekly-hours-worked/thailand"],
+  ilo: ["ILOSTAT 每週實際工時資料表", "https://data.ilo.org/vis?df%5Bds%5D=ds-production&df%5Bid%5D=DF_HOW_TEMP_SEX_NB&df%5Bag%5D=ILO"],
+  housing: ["Numbeo 亞洲城市房價指數", "https://www.numbeo.com/property-investment/region_rankings.jsp?region=142&title=2026-mid"],
+  houseMethod: ["Numbeo 房價算法", "https://www.numbeo.com/property-investment/indicators_explained.jsp"],
+  moi: ["台灣內政部房價負擔能力", "https://pip.moi.gov.tw/Publicize/Info/E1050"],
+  hdb: ["新加坡統計局家戶統計", "https://www.singstat.gov.sg/find-data/search-by-theme/households/households/latest-data"],
+  cost: ["Numbeo 亞洲城市生活成本", "https://www.numbeo.com/cost-of-living/region_rankings.jsp?region=142&title=2026-mid"],
+  countryCost: ["Numbeo 各國生活成本", "https://www.numbeo.com/cost-of-living/rankings_by_country.jsp?displayColumn=0&title=2026-mid"],
+  costMethod: ["Numbeo 物價算法", "https://www.numbeo.com/cost-of-living/cpi_explained.jsp"],
+  fx: ["美國聯準會年度平均匯率", "https://www.federalreserve.gov/releases/g5a/current/"]
+};
+
+const countries = [
+  { id:"tw", name:"台灣", money:"NT$", fx:1, gdpPc:39512, gni:40600, avg:760632, med:546000, hours:2027, cost:49.1,
+    avgYear:"2025", medYear:"2024", hoursBasis:"月均實際工時 × 12", avgSource:"twAvg", medSource:"twMed", hoursSource:"hours",
+    wageBasis:"工業及服務業受僱者，含全時與部分工時。2024 年本國籍全時員工中位數為 NT$58.5 萬。" },
+  { id:"kr", name:"南韓", money:"₩", fx:32.1064/1363.4381, gdpPc:36408, gni:36850, avg:45000000, med:34560000, hours:1936, cost:56.7, chartNotes:{hours:"正職",avg:"含部分工時",med:"含部分工時",hourlyG:"薪含部分工時",incomeWage:"薪含部分工時"},
+    avgYear:"2024 年 12 月 × 12", medYear:"2024 年 12 月 × 12", hoursBasis:"雇用勞動部常用勞工（多為全時）2025 年月均總工時 161.3 小時 × 12。含臨時日雇者的全體平均為 153.8 小時，年化 1,846 小時", avgSource:"krWage", medSource:"krWage", hoursSource:"krHours",
+    wageBasis:"2024 年 12 月受僱職位月所得，平均 ₩375 萬、中位數 ₩288 萬，均乘 12。" },
+  { id:"cn", name:"中國", money:"RMB ", fx:31.1663/7.1875, gdpPc:13970, gni:13780, avg:[71590,129441], med:null, hours:2527, cost:30.7,
+    avgYear:"2025", medYear:"—", hoursBasis:"企業每週 48.6 小時 × 52，2025 年底資料", avgSource:"cnWage", medSource:"cnWage", hoursSource:"cnHours", hoursEstimated:true,
+    wageBasis:"城鎮私營與非私營單位分列。居民可支配所得中位數衡量的是另一項指標。" },
+  { id:"sg", name:"新加坡", money:"S$", fx:31.1663/1.3065, gdpPc:99365, gni:82120, avg:86376, med:60000, hours:2241, cost:90.8,
+    avgYear:"2025 月均 × 12", medYear:"2025 月中位數 × 12", hoursBasis:"勞動部年化值，25 人以上公私營單位", avgSource:"sgAvg", medSource:"sgMed", hoursSource:"hours", hoursEstimated:true,
+    wageBasis:"平均薪資採 CPF 受僱者資料。中位數採全職就業居民，排除雇主 CPF 提撥。若計入，年化為 S$69,300。" },
+  { id:"jp", name:"日本", money:"¥", fx:31.1663/149.5686, gdpPc:36119, gni:38220, avg:5590000, med:[4000000,5000000], hours:1926, cost:47.6, chartNotes:{avg:"正職",med:"含非正職",hourlyG:"薪含非正職",incomeWage:"薪含非正職"},
+    avgYear:"2025 · 正職", medYear:"2025 級距 · 含非正職", hoursBasis:"厚生勞動省一般勞工（全時）月均 160.5 小時 × 12。含部分工時者約 1,621 小時", avgSource:"jpWage", medSource:"jpWage", hoursSource:"jpHours",
+    wageBasis:"全年任職的民間受僱者。平均年薪採正職（正社員）¥559 萬；含非正職的全體平均為 ¥487 萬，非正職平均 ¥210 萬。年薪中位數仍為全體受僱者、含非正職，落在超過 ¥400 萬至 ¥500 萬的級距，因官方未公布正職中位數。" },
+  { id:"th", name:"泰國", money:"฿", fx:31.1663/32.8619, gdpPc:8057, gni:7850, avg:258780, med:null, hours:2205, cost:36.8, wageCity:"曼谷",
+    avgYear:"曼谷 2025 月均 × 12", medYear:"—", hoursBasis:"ILOSTAT 全國每週實際 42.4 小時 × 52", avgSource:"thBkkWage", medSource:"thBkkWage", hoursSource:"thHours", hoursEstimated:true,
+    wageBasis:"薪資只採曼谷：受僱者平均月薪 ฿21,565 × 12，2025 年，取自泰叻報轉述的國家統計局調查，尚未與原始表格核對，不含年終獎金。官方未公布曼谷中位數，列為缺值。全國平均月薪約 ฿15,900。" },
+  { id:"us", name:"美國", money:"US$", fx:31.1663, gdpPc:90267, gni:89490, avg:72800, med:62608, hours:1800, cost:69.7, chartNotes:{med:"全職",hourlyG:"薪為全職",incomeWage:"薪為全職"},
+    avgYear:"2025 · 全體受僱者", medYear:"2025 · 全職週薪 × 52", hoursBasis:"OECD 年度實際工時，含部分工時者", avgSource:"usAwi", medSource:"usMed", hoursSource:"usHours", hoursEstimated:true,
+    wageBasis:"平均年薪採社會安全局 2025 年全國平均工資指數 $72,800，涵蓋所有受僱者。年薪中位數採勞工統計局全職受僱者週薪中位數 $1,204 × 52，只含全職，所以放大係數 G 會偏高。" },
+  { id:"au", name:"澳洲", money:"A$", fx:31.1663*0.6450, gdpPc:66379, gni:64120, avg:104520, med:74100, hours:1627, cost:71.4, chartNotes:{avg:"全職",med:"全體",hours:"含部分工時"}, hoursYear:"2024 年",
+    avgYear:"2025 年 5 月 · 全職週薪 × 52", medYear:"2025 年 8 月 · 全體週薪 × 52", hoursBasis:"OECD 2024 年度實際工時，含部分工時者（約三成），會比全職工時短", avgSource:"auAwe", medSource:"auEe", hoursSource:"auHours",
+    wageBasis:"平均年薪採澳洲統計局 2025 年 5 月全職成人平均每週正常工時收入 A$2,010 × 52，只含全職。年薪中位數採 2025 年 8 月全體受僱者主要工作週薪中位數 A$1,425 × 52，含部分工時者；全職中位數為 A$1,741。人均所得為世界銀行 Atlas 法。" }
+];
+
+const cities = [
+  // Prices follow basketItems in order and use the city's local currency.
+  { name:"台北", country:"tw", slug:"Taipei", housing:31.4, officialHousing:14.72, cityCost:54.5, power:85.1, prices:[150,98.25,97.14,86.72,313.89,157.33,141.82,20,2756.92,851.16], netPay:74596, grossPay:78917, payNote:"全時平均 · 2024", payBasis:"本國籍全時受僱員工全年總薪資平均 NT$94.7 萬 ÷ 12，含年終", paySource:"twCityPay" },
+  { name:"台中", country:"tw", slug:"Taichung", housing:null, officialHousing:11.35, cityCost:46.7, power:84.2, prices:[150,84.75,102.57,81,251.62,136.67,70.25,20,3958.33,718.92], netPay:53219, grossPay:56083, payNote:"全時平均 · 2024", payBasis:"全年總薪資平均 NT$67.3 萬 ÷ 12，含年終", paySource:"twCityPay" },
+  { name:"高雄", country:"tw", slug:"Kaohsiung", housing:12.9, officialHousing:9.35, cityCost:45.8, power:93.9, prices:[135,97.86,101.43,80.93,251.67,212.20,136.67,20,2863.72,789.67], netPay:54312, grossPay:57250, payNote:"全時平均 · 2024", payBasis:"全年總薪資平均 NT$68.7 萬 ÷ 12，含年終", paySource:"twCityPay" },
+  { name:"首爾", country:"kr", slug:"Seoul", housing:30.0, cityCost:64.5, power:124.8, prices:[12000,5698,2817.50,4830.67,14185.48,10060,8369.23,1550,285041.67,27170.62], netPay:3974607, grossPay:4765000, payNote:"常用勞工平均 · 2025", payBasis:"常用勞工 1 人月薪資總額 ₩476.5 萬（2025 年 4 月）", paySource:"krSeoulPay" },
+  { name:"上海", country:"cn", slug:"Shanghai", housing:31.2, cityCost:40.5, power:92.8, prices:[30,6.74,12.07,12.32,21.08,15.19,11.37,3,396.39,68.92], netPay:10048, grossPay:12577, payNote:"全口徑平均 · 2025", payBasis:"全口徑城鎮單位就業人員平均工資 RMB 12,577／月", paySource:"cnShPay" },
+  { name:"北京", country:"cn", slug:"Beijing", housing:29.7, cityCost:37.9, power:90.2, prices:[30,8.42,11.19,12.58,21.31,13.80,10.50,4,394.65,90.88], netPay:9707, grossPay:12117, payNote:"全口徑平均 · 2025", payBasis:"全口徑平均工資約 RMB 12,117／月，由 2026 年社保基數下限 7,270 ÷ 60% 反推", paySource:"cnBjPay" },
+  { name:"成都", country:"cn", slug:"Chengdu", housing:11.8, cityCost:28.6, power:112.7, prices:[20,6.11,12.23,10.64,24.17,12,7.83,2,279.70,78.53], netPay:6597, grossPay:8056, payNote:"加權平均 · 2025 估", payBasis:"非私營 RMB 131,874 與私營 69,679 年薪，依青島的就業比重加權，約 RMB 8,056／月", paySource:"cnCdPay" },
+  { name:"青島", country:"cn", slug:"Qingdao", housing:12.1, cityCost:30.0, power:108.2, prices:[20,3.05*2.20462,13.06,8.83,13.15*2.20462,4.34*2.20462,3.90*2.20462,2,461.48,58.47], netPay:6668, grossPay:8145, payNote:"全市單位平均 · 2025", payBasis:"全市單位就業人員年平均工資 RMB 97,736 ÷ 12", paySource:"cnQdPay" },
+  { name:"新加坡", country:"sg", slug:"Singapore", housing:24.7, cityCost:90.8, power:91.3, prices:[15,3.49,3.80,4.63,12.62,6,2.86,2,217.47,36.12], netPay:5549, grossPay:7198, payNote:"受僱者平均 · 2025", payBasis:"受僱者平均月收入 S$7,198，不含雇主公積金", paySource:"sgAvg" },
+  { name:"東京", country:"jp", slug:"Tokyo", housing:16.0, cityCost:54.3, power:106.9, prices:[1200,867.86,238.87,349.87,1046.15,734.20,807.36,200,25807.89,4792.04], netPay:412252, grossPay:537000, payNote:"全時平均 · 2024", payBasis:"一般勞工（全時）每月固定薪資 × 12＋年間獎金，約 ¥644 萬 ÷ 12", paySource:"jpTokyoPay" },
+  { name:"曼谷", country:"th", slug:"Bangkok", housing:37.8, cityCost:43.5, power:35.9, prices:[100,45.58,57.58,85.43,130.44,127.66,65.31,38,3560.23,579.80], netPay:20815, grossPay:21565, payNote:"受僱者平均 · 2025", payBasis:"曼谷受僱者平均月薪 ฿21,565", paySource:"thBkkWage" },
+  { name:"舊金山", country:"us", slug:"San-Francisco", housing:6.5, cityCost:94.9, power:156.9, prices:[29.30,2.34*2.20462,1.73,5.28,7.21*2.20462,2.76*2.20462,3.20*2.20462,3.00,230.74,66.76], netPay:6055, grossPay:8353, payNote:"都會區平均 · 2025", payBasis:"舊金山–奧克蘭–佛利蒙全部職業平均時薪 $48.19 × 2,080 ÷ 12", paySource:"usSfMean" },
+  { name:"雪梨", country:"au", slug:"Sydney", housing:12.5, cityCost:79.2, power:105.9, prices:[25,1.53*2.20462,2.50,7.68,5.91*2.20462,2.58*2.20462,2.84*2.20462,4.42,360.04,87.56], netPay:7132, grossPay:9360, payNote:"全職平均 · 2025 估", payBasis:"新南威爾斯全職成人週薪約 A$2,160 × 52 ÷ 12（以正常工時週薪 A$2,084 加上全國加班比例估算）", paySource:"auNswPay" }
+];
+
+const basketItems = [
+  {label:"平價外食／餐", category:0, quantity:1},
+  {label:"白米／公斤", category:1, quantity:3},
+  {label:"牛奶／公升", category:1, quantity:4},
+  {label:"雞蛋／12 顆", category:1, quantity:2},
+  {label:"雞肉／公斤", category:1, quantity:2},
+  {label:"蘋果／公斤", category:1, quantity:2},
+  {label:"番茄／公斤", category:1, quantity:2},
+  {label:"大眾運輸／單程", category:2, quantity:44},
+  {label:"水電等基本帳單／月", category:3, quantity:1},
+  {label:"家用網路／月", category:3, quantity:1}
+];
+const basketProfiles = {mixed:{meals:20,grocery:1},home:{meals:8,grocery:1.5},dine:{meals:40,grocery:0.75}};
+const basketProfileNames = {mixed:"混合外食",home:"偏自炊",dine:"偏外食"};
+
+// Local currency: one-bedroom rent per month and apartment price per m², outside the city centre.
+const housingInputs = {
+  Taipei:[15000,228441.67], Taichung:[8825,134100], Kaohsiung:[10750,93485.14],
+  Seoul:[880000,1439437.52/0.09290304], Shanghai:[3829.41,45121.96], Beijing:[3441.25,42320.35],
+  Chengdu:[1511,12632.09], Singapore:[2914.48,20448.47], Tokyo:[113742.86,872153.85], Bangkok:[11758.33,111018.04],
+  Qingdao:[1178.75,1278.09*10.7639], "San-Francisco":[2722.94,771.57*10.7639], Sydney:[2599.67,1138.21*10.7639]
+};
+
+const metrics = {
+  gdpPc:{ tab:"人均 GDP", title:"名目人均 GDP", unit:"美元／人", period:"2025 年 · 名目美元", source:"gdpPc2025", method:"economy", note:"採 IMF 2026 年 10 月《世界經濟展望》的 2025 年現價美元人均 GDP。", heading:"新加坡人均 GDP 約為台灣的 2.5 倍", copy:"以台灣 39,512 美元為 100%，新加坡為 251.5%，南韓為 92.1%，日本為 91.4%。各地以當期市場匯率計價。" },
+  gni:{ tab:"人均所得", title:"人均國民所得毛額", unit:"美元／人", period:"2025 年 · 現價美元", source:"gni", method:"economy", note:"台灣採央行年報，其餘採世界銀行現價美元 GNI 除以人口，四捨五入至十美元。", heading:"新加坡人均所得約為台灣兩倍", copy:"新加坡約 8.21 萬美元。台灣、日本、南韓介於 3.69 至 4.06 萬美元。GNI 涵蓋居民的勞動與資本所得。" },
+  avg:{ tab:"平均年薪", title:"平均年薪", unit:"萬新台幣", period:"2024–2025 年 · 各地受僱者統計", source:"", method:"wages", note:"用於比較的薪資統一換算新台幣。中國雙標記分別代表城鎮私營與非私營平均值，排序取較高值。泰國只採曼谷受僱者平均月薪 × 12。日本採正職平均 ¥559 萬，含非正職的全體平均為 ¥487 萬。", heading:"平均值會受樣本與高薪族群影響", copy:"中國城鎮非私營的平均年薪約為私營的 1.8 倍。新加坡與台灣的中位數也低於平均值，兩者的涵蓋人群與統計期間仍需一起看。" },
+  med:{ tab:"年薪中位數", title:"年薪中位數", unit:"萬新台幣", period:"2024–2025 年 · 依當地官方資料", source:"", method:"wages", note:"用於比較的薪資統一換算新台幣。斜紋末段表示統計級距，排序用上限。中國缺全國單一值，泰國只採曼谷而官方未公布曼谷中位數，兩者列為缺值。", heading:"中位數有單點與級距", copy:"新加坡全職就業居民中位數約 NT$143 萬。日本落在約 NT$83 至 104 萬（含非正職）。中國與泰國（曼谷）沒有可用的中位數。台灣 2025 年全年中位數預定於 2026/11/30 發布。" },
+  hours:{ tab:"平均年工時", title:"平均年工時", unit:"小時／年", period:"2025 年 · 年度統計與週工時年化", source:"", method:"working-hours", note:"約數代表以週工時年化或官方年化。在樣本涵蓋不同的情況下，排序呈現表中估值。", heading:"台灣約 2,027 小時", copy:"南韓常用勞工（多為全時）約 1,936 小時，日本全時勞工約 1,926 小時；日本部分工時者約占三成，全部計入只有約 1,621 小時。中國與泰國以各自的週工時乘 52，新加坡使用勞動部年化值，樣本與工時定義各有差異。" },
+  cost:{ tab:"日常物價", title:"全國日常物價指數", unit:"紐約＝100", period:"2026 年中 · 不含租", source:"countryCost", method:"prices", note:"指數涵蓋食品、外食、交通與水電，排除租金及房貸。", heading:"新加坡的日常物價最高", copy:"新加坡為 90.8，較台灣全國 49.1 高約 85%。泰國與中國的全國指數分別為 36.8 與 30.7。" },
+  housing:{ tab:"房價所得比", title:"城市房價所得比", unit:"倍", period:"2026 年中 · 90 平方公尺公寓", source:"housing", method:"home", note:"以固定面積公寓估價除以推估家戶年稅後所得。Numbeo 2026 年中城市房價榜未列台中，台灣三城可查「台北、台中、高雄購屋負擔」的內政部資料。", heading:"曼谷購屋負擔最高，東京相對低", copy:"曼谷 37.8 倍，台北 31.4 倍，東京 16.0 倍。新加坡居民多住 HDB 組屋，判讀時也要考慮組屋資格與價格。" },
+  cityCost:{ tab:"日常物價", title:"城市日常物價指數", unit:"紐約＝100", period:"2026 年中 · 不含租", source:"cost", method:"prices", note:"涵蓋食品、外食、交通與水電，排除租金及房貸。", heading:"台北和東京日常物價接近", copy:"台北 54.5、東京 54.3。兩地外食、食材和通勤的單價仍有差異，可用下方物價表了解支出結構。" },
+  power:{ tab:"本地購買力", title:"城市本地購買力指數", unit:"紐約＝100", period:"2026 年中 · 以本地稅後均薪估計", source:"cost", method:"prices", note:"採 Numbeo 平均稅後薪資及生活價格估計，與國家表中的各國官方年薪中位數口徑不同。", heading:"物價低，還要考慮本地薪資", copy:"首爾指數 124.8，高於台北的 85.1。曼谷物價較低，本地購買力指數同時較低，為 35.9。" }
+};
+
+const derivedMetrics = {
+  hourlyG:{tab:"放大係數 G", title:"放大係數 G", unit:"新台幣／小時", period:"各地年薪中位數 ÷ 平均年工時", method:"derived", note:"先把年薪中位數換成台幣。斜紋表示級距。日本的年薪中位數含非正職、工時只算正職，時薪會偏低。", heading:"台灣約 NT$269.4／小時", copy:"G 用兩項統計值估算每小時對應的薪資。年工時與年薪涵蓋人群或年份有差異，應按估算值判讀。"},
+  incomeWage:{tab:"人均所得 ÷ 中位年薪", title:"人均所得 ÷ 年薪中位數", unit:"倍", period:"2025 年人均 GNI ÷ 各地年薪中位數", method:"derived", note:"分子與分母均以台幣計算。薪資級距的上限對應比值下限。日本的年薪中位數含非正職。", heading:"台灣約 2.32 倍，在有資料的四國中最高", copy:"人均 GNI 涵蓋勞動與資本所得，分母是受僱者薪資分布的中位數，兩者的統計母體不同。台灣的中位數涵蓋部分工時者，且薪資為 2024 年、GNI 為 2025 年，會讓倍數略為偏高，解讀時宜保守。"},
+  outputIncome:{tab:"人均 GDP ÷ 人均所得", title:"人均 GDP ÷ 人均所得", unit:"倍", period:"2025 年名目人均 GDP ÷ 人均 GNI", method:"derived", note:"分子、分母皆用現價美元。", heading:"台灣約 0.97 倍", copy:"比值反映國內生產與國民所得的比例，會受到跨境初次所得淨額影響。"}
+};
+Object.assign(metrics,derivedMetrics);
+
+// Plain-language framing for each chart: what it compares, how to read it, and which direction is favourable.
+const explain = {
+  gdpPc:{meaning:"比的是：<b>國家平均每人創造多少產值</b>，也就是經濟生產力。", read:"數值越高，經濟越有生產力。但產值不等於個人實拿，要搭配人均所得和薪資一起看。", dir:"up", tag:"越高越富裕"},
+  gni:{meaning:"比的是：<b>平均每位國民一年賺進多少所得</b>，含薪資、利息、股利與海外收入。", read:"數值越高，國民整體越富裕。這是全體平均，會被高所得者拉高。", dir:"up", tag:"越高越富裕"},
+  outputIncome:{meaning:"比的是：<b>國內產值有多少真正變成國民所得</b>。", read:"大於 1 倍，代表國內產出有一部分流向海外，例如外資獲利匯出；小於 1 倍，代表國民從海外賺回較多所得。接近 1 倍較平衡。", dir:"flat", tag:"接近 1 倍較平衡"},
+  med:{meaning:"比的是：<b>正中間那位受僱者的年薪</b>，比平均更接近「一般上班族」。", read:"數值越高，一般人領得越多。斜紋段代表官方只公布級距。", dir:"up", tag:"越高越好"},
+  avg:{meaning:"比的是：<b>受僱者的平均年薪</b>。", read:"數值越高薪資水準越高，但容易被少數高薪族拉高。跟中位數差越多，代表薪資分布越不平均。泰國只採曼谷。", dir:"up", tag:"越高越好"},
+  incomeWage:{meaning:"比的是：<b>貧富差距的粗略程度</b>：國家平均所得是一般上班族年薪的幾倍。", read:"倍數越高，代表整體所得越集中在薪資以外（資本收入、高所得族群），一般上班族分到的比例越少。僅為粗略參考，並非吉尼係數。", dir:"down", tag:"越低差距越小"},
+  hours:{meaning:"比的是：<b>一般人一年要工作多少小時</b>。", read:"數值越高，工作時間越長。各地統計口徑不同，看大致高低即可。", dir:"down", tag:"越低越輕鬆"},
+  hourlyG:{meaning:"比的是：<b>一般人工作一小時大約賺多少</b>（年薪中位數 ÷ 年工時）。", read:"數值越高，每小時勞動換到的報酬越好。這是兩項統計值相除的估算。", dir:"up", tag:"越高越好"},
+  cost:{meaning:"比的是：<b>全國日常生活物價</b>，不含房租與房貸。", read:"數值越高，日常開銷越貴。原始指數以紐約＝100。", dir:"down", tag:"越低越便宜"},
+  housing:{meaning:"比的是：<b>買一間房要不吃不喝幾年</b>（房價 ÷ 年所得）。", read:"倍數越高，越難買房。台中未列入此資料，台灣三城另見基礎統計的內政部數據。", dir:"down", tag:"越低越好買"},
+  cityCost:{meaning:"比的是：<b>城市日常開銷貴不貴</b>，不含房租。", read:"數值越高，在這個城市生活越貴。原始指數以紐約＝100。", dir:"down", tag:"越低越便宜"},
+  power:{meaning:"比的是：<b>當地薪水在當地買得到多少東西</b>。", read:"數值越高，薪水越耐花。這是把當地薪資和當地物價一起算的結果。", dir:"up", tag:"越高越耐花"}
+};
+
+const chartGroups = [
+  {id:"group-economy", nav:"經濟水準", title:"經濟水準：國家整體有多富裕", copy:"先看國家層級的產值與所得，回答「這個國家平均每人有多少錢」。", keys:["gdpPc","gni","outputIncome"]},
+  {id:"group-wages", nav:"薪資與分配", title:"薪資與分配：一般人實際領多少", copy:"平均薪資容易被高薪族拉高，中位數較接近一般上班族。再拿人均所得和中位數相比，可以看出分配落差。", keys:["med","avg","incomeWage"]},
+  {id:"group-hours", nav:"工時與時薪", title:"工時與時薪：花多少時間換這份薪水", copy:"同樣的年薪，工時越長，每小時的報酬就越低。", keys:["hours","hourlyG"]},
+  {id:"group-living", nav:"生活成本與購屋", title:"生活成本與購屋：錢在當地耐不耐花", copy:"房價與物價越高負擔越重；本地購買力則把當地薪資一起算進去。", keys:["housing","cityCost","power","cost"]}
+];
+const chartKeys = chartGroups.flatMap(group=>group.keys);
+
+const methodology = [
+  ["derived","三項衍生指標的計算方式","G＝年薪中位數 ÷ 平均年工時，單位為新台幣／小時。人均所得 ÷ 年薪中位數＝人均 GNI ÷ 年薪中位數，兩者都先換為台幣。人均 GDP ÷ 人均所得＝名目人均 GDP ÷ 人均 GNI，兩者皆用 2025 年現價美元。美元所得用 2025 年均匯率換算，各地薪資沿用該薪資資料年度的均匯率。中國缺全國年薪中位數，泰國只採曼谷而無官方中位數，兩國前兩項留空。日本使用級距，倒數比值的上下限會對調。台灣與南韓的年薪中位數用 2024 年資料，工時及人均 GNI 用 2025 年資料。",["fx"]],
+  ["benchmark","比較基準","百分比＝各國原始數值 ÷ 台灣同指標原始數值 × 100。城市指標與單項物價以台北同指標為分母。薪資先換算成新台幣，級距與分類數值各自換算。大於 100% 表示數值較高，購屋負擔或物價是否較有利仍須視指標判斷。",[]],
+  ["economy","人均 GDP 與人均所得","人均 GDP 採 IMF 2026 年 10 月版的 2025 年現價美元數值。人均 GNI 包含勞動與資本所得。台灣採央行年報，其餘以世界銀行現價美元 GNI 除以人口。",["gdpPc","gdpPc2025","twGni","gni","population"]],
+  ["wages","平均年薪與年薪中位數","薪資樣本涵蓋範圍及獎金定義會依各地調查變動。台灣的 2025 年全年薪資中位數預定於 2026/11/30 發布，暫列 2024 年值。澳洲平均年薪採澳洲統計局全職成人平均週薪 × 52，年薪中位數採全體受僱者週薪中位數 × 52（含部分工時者）。美國平均年薪採社會安全局全國平均工資指數（全體受僱者），年薪中位數採勞工統計局全職受僱者週薪中位數 × 52。日本平均年薪採國稅廳正職（正社員）平均 ¥559 萬；年薪中位數因官方未公布正職數字，仍用全體受僱者（含非正職）的級距，會比正職中位數低。泰國薪資只採曼谷：平均月薪 ฿21,565 × 12 取自泰叻報轉述的國家統計局 2025 年調查，尚未與原始表格核對，不含年終獎金；官方未公布曼谷中位數，列為缺值。泰國的人均所得與工時仍為全國數字。中國官方居民人均可支配所得中位數為 RMB 36,231，衡量的是住戶所得。薪資換算使用資料年度的平均匯率。",["twAvg","twMed","twRelease","krWage","cnWage","cnIncome","sgAvg","sgMed","jpWage","thBkkWage","thWage","fx"]],
+  ["working-hours","平均年工時","台灣採主計總處工業及服務業月均實際工時 × 12。美國採 OECD 2025 年約 1,800 小時，澳洲採 OECD 2024 年 1,627 小時，兩者都含部分工時者；澳洲部分工時者約占三成，工時會明顯偏短。日本改採厚生勞動省每月勤勞統計 2025 年一般勞工（全時）月均 160.5 小時 × 12＝1,926 小時；日本部分工時者約占三成、月均僅 79.1 小時，若全部計入只有約 1,621 小時，會讓日本工時看起來偏短。日本年薪中位數則涵蓋部分工時者，放大係數 G 可能略偏低。南韓改採雇用勞動部事業體勞動力調查 2025 年常用勞工（以正職與一年以上契約者為主，多為全時）月均總工時 161.3 小時 × 12＝1,936 小時；含臨時日雇者的全體平均為 153.8 小時、年化 1,846 小時。南韓年薪仍為全體受僱職位、含部分工時者，放大係數 G 可能偏低。新加坡採勞動部年化值，涵蓋公私部門 25 人以上事業單位。中國用 2025 年底企業受僱者每週 48.6 小時 × 52，泰國用 ILOSTAT 全體就業者每週實際 42.4 小時 × 52。年化結果反映全年持續維持該週工時的情境。",["hours","krHours","jpHours","cnHours","ilo","thHours"]],
+  ["home","房價所得比與住宅市場","Numbeo 以 90 平方公尺公寓估價除以推估家庭年稅後所得，後者設為平均個人稅後薪資的 1.5 倍。其 2026 年中城市房價榜未列台中。台灣三城表採內政部 2026 年第 1 季資料，以住宅成交價中位數除以家戶可支配所得中位數。新加坡 2025 年有 77.2% 的居民家庭居住於 HDB 組屋。",["housing","houseMethod","moi","hdb"]],
+  ["prices","日常物價與購買力","Numbeo 集合群眾回報的城市價格，以紐約為 100。日常物價涵蓋食品、外食、交通與水電，排除租金與房貸。月消費籃使用 2026/11/24 查閱的城市單價（青島、舊金山、雪梨為 2026/11/25 查閱，原頁以磅與平方英尺計價，已換算成公斤與平方公尺），同一情境內各城市用量一致。消費籃負擔以當地幣的月支出除以同一城市的平均稅後月薪；稅後月薪由官方平均月薪扣除所得稅與社會保險估算，見生活困難指數的計算方式。帳單為約 85 平方公尺公寓的水電、冷暖氣、垃圾處理與家用網路。台幣價格採 2025 年平均匯率。",["cost","countryCost","costMethod","fx"]]
+];
+
+const baseCountryKeys = ["gdpPc","gni","avg","med","hours","cost"];
+const derivedKeys = Object.keys(derivedMetrics);
+const metricGroups = {country:[...derivedKeys,...baseCountryKeys], city:["housing","cityCost","power"]};
+const countryById = new Map(countries.map(country => [country.id,country]));
+const benchmarkByScope = {country:countryById.get("tw"), city:cities.find(city => city.slug === "Taipei")};
+const basketRates = {...Object.fromEntries(countries.map(country=>[country.id,country.fx])),kr:31.1663/1421.3963};
+const $ = id => document.getElementById(id);
+const scopeOf = key => metricGroups.city.includes(key) ? "city" : "country";
+const state = {sort:"desc", view:"relative", currency:"twd", basket:"twd", profile:"mixed", basketSort:"region", basketRegion:"all", filters:new Set(countries.map(country => country.id))};
+const number = (value,digits=0) => value.toLocaleString("zh-TW",{minimumFractionDigits:digits,maximumFractionDigits:digits});
+const anchor = ([label,url], text=label) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${text}</a>`;
+const wageMetric = key => key === "avg" || key === "med";
+const chartSub = (row,key) => row.chartNotes?.[key] ?? (wageMetric(key) ? row.wageCity : undefined);
+const rowCountry = row => countryById.get(row.country ?? row.id);
+
+function metricValue(row,key) {
+  if (key === "outputIncome") return row.gdpPc/row.gni;
+  if (key !== "hourlyG" && key !== "incomeWage") return row[key];
+  if (row.med === null) return null;
+  const calculate = wage => key === "hourlyG" ? wage*row.fx/row.hours : row.gni*31.1663/(wage*row.fx);
+  return Array.isArray(row.med) ? row.med.map(calculate).sort((a,b)=>a-b) : calculate(row.med);
+}
+
+function displayValue(row,key,{chart=false}={}) {
+  const value = metricValue(row,key);
+  if (value === null) return "—";
+  if (Object.hasOwn(derivedMetrics,key)) {
+    const formatted = (Array.isArray(value) ? value : [value]).map(amount=>number(amount,key === "hourlyG" ? 1 : 2)).join(" – ");
+    return `${formatted}${key === "hourlyG" ? (chart ? "" : " 元／時") : " 倍"}`;
+  }
+  if (wageMetric(key)) {
+    const country = rowCountry(row);
+    const local = !chart && state.currency === "local";
+    const money = amount => local ? `${country.money}${number(amount)}` : `${chart ? "" : "NT$"}${number(amount*country.fx/10000,1)} 萬`;
+    if (Array.isArray(value)) return `${money(value[0])}${key === "avg" ? "／" : " – "}${money(value[1])}`;
+    return money(value);
+  }
+  if (key === "hours") return `${row.hoursEstimated ? "約 " : ""}${number(value)}${chart ? "" : " 小時"}`;
+  if (key === "housing") return `${number(value,1)} 倍`;
+  return number(value,["gdpPc","gni"].includes(key) ? 0 : 1);
+}
+
+function widthValues(row,key) {
+  const value = metricValue(row,key);
+  if (value === null) return [];
+  const scale = wageMetric(key) ? rowCountry(row).fx : 1;
+  return Array.isArray(value) ? value.map(item=>item*scale) : [value*scale];
+}
+
+function relativeValues(row,key) {
+  const reference = widthValues(benchmarkByScope[scopeOf(key)],key)[0];
+  return widthValues(row,key).map(value=>value/reference*100);
+}
+
+const percentLabel = value => `${number(value,value === 100 ? 0 : 1)}%`;
+
+function relativeLabel(row,key) {
+  const values = relativeValues(row,key);
+  if (values.length === 0) return "";
+  return values.map(percentLabel).join(key === "avg" ? "／" : " – ");
+}
+
+function visibleRows(key) {
+  const base = scopeOf(key) === "country" ? countries : cities;
+  const rows = base.filter(row => state.filters.has(rowCountry(row).id));
+  if (state.sort === "region") return rows;
+  const direction = state.sort === "desc" ? -1 : 1;
+  return rows.sort((a,b) => {
+    const aValue = widthValues(a,key).at(-1);
+    const bValue = widthValues(b,key).at(-1);
+    if (aValue === undefined) return bValue === undefined ? 0 : 1;
+    if (bValue === undefined) return -1;
+    return direction * (aValue-bValue);
+  });
+}
+
+function renderControls() {
+  $("filters").querySelectorAll("button").forEach(button => button.setAttribute("aria-pressed", String(state.filters.has(button.dataset.country))));
+  $("export").disabled = state.filters.size === 0;
+}
+
+function cardMarkup(key) {
+  const metric = metrics[key];
+  const {meaning,read,dir,tag} = explain[key];
+  const scope = scopeOf(key);
+  return `<article class="chart-card" id="card-${key}" aria-labelledby="title-${key}">
+    <div class="card-kicker"><span>${scope === "country" ? "國家" : "城市"} · ${metric.period}</span><span class="direction ${dir}">${tag}</span></div>
+    <h4 id="title-${key}" tabindex="-1">${metric.title}</h4>
+    <p class="meaning">${meaning}</p>
+    <p class="read">怎麼讀：${read}</p>
+    <p class="chart-unit" id="unit-${key}"></p>
+    <div id="chart-${key}"></div>
+    <p class="takeaway"><strong>重點</strong>${metric.heading}</p>
+    <details class="card-detail"><summary>數值明細、口徑與來源</summary>
+      <p class="card-copy">${metric.copy}</p>
+      <p class="card-note">${metric.note} <a href="#${metric.method}">查看統計口徑</a></p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="${metric.title}明細"><table class="data-table mini-table" id="table-${key}"></table></div>
+    </details>
+  </article>`;
+}
+
+function buildCharts() {
+  $("group-nav").innerHTML = chartGroups.map(group=>`<a href="#${group.id}">${group.nav}</a>`).join("");
+  $("chart-groups").innerHTML = chartGroups.map(group=>`<section class="group" id="${group.id}" aria-labelledby="${group.id}-title"><div class="group-head"><h3 id="${group.id}-title">${group.title}</h3><p>${group.copy}</p></div><div class="chart-grid">${group.keys.map(cardMarkup).join("")}</div></section>`).join("");
+}
+
+function renderChart(key) {
+  const rows = visibleRows(key);
+  const isRelative = state.view === "relative";
+  const scope = scopeOf(key);
+  const benchmark = benchmarkByScope[scope];
+  $(`unit-${key}`).textContent = isRelative ? `${benchmark.name}＝100%（虛線為基準） · 共 ${rows.length} 個${scope === "country" ? "國家" : "城市"}` : `單位：${metrics[key].unit} · 共 ${rows.length} 個${scope === "country" ? "國家" : "城市"}`;
+  if (rows.length === 0) {
+    $(`chart-${key}`).innerHTML = '<p class="chart-empty">請選擇至少一個國家，或恢復全部。</p>';
+    return;
+  }
+  const metric = metrics[key];
+  const readValue = isRelative ? relativeValues : widthValues;
+  const group = scope === "country" ? countries : cities;
+  const max = Math.max(1,...group.flatMap(row=>readValue(row,key)));
+  const percent = value => `${value/max*100}%`;
+  $(`chart-${key}`).innerHTML = `<ul class="chart-list" aria-label="${metric.title}長條圖">${rows.map(row => {
+    const [low,high] = readValue(row,key);
+    let bars = "";
+    if (low !== undefined) bars = `<span class="bar" style="--width:${percent(low)}"></span>`;
+    if (high !== undefined && key !== "avg") bars += `<span class="bar-range" style="--start:${percent(low)};--width:${percent(high-low)}"></span>`;
+    if (high !== undefined && key === "avg") bars += `<span class="bar-split" style="--start:calc(${percent(high)} - 4px);--width:4px"></span>`;
+    const marker = isRelative ? `<span class="baseline-marker" style="--start:${percent(100)}"></span>` : "";
+    const label = isRelative ? relativeLabel(row,key) || "—" : displayValue(row,key,{chart:true});
+    return `<li class="chart-row" data-country="${rowCountry(row).id}"><span class="chart-name">${row.name}${chartSub(row,key) ? `<span class="chart-sub">${chartSub(row,key)}</span>` : ""}</span><span class="track" aria-hidden="true">${bars}${marker}</span><span class="chart-value">${label}</span></li>`;
+  }).join("")}</ul>`;
+}
+
+const columnNames = {gdpPc:"人均 GDP（美元）",gni:"人均 GNI（美元）",avg:"平均年薪",med:"年薪中位數",hours:"平均年工時",cost:"不含租物價",housing:"房價所得比",cityCost:"不含租物價",power:"本地購買力"};
+for (const key of derivedKeys) columnNames[key] = derivedMetrics[key].tab;
+
+function renderBaseTables() {
+  const groups = [["base-countries",countries,baseCountryKeys,"國家／地區"],["base-cities",cities,metricGroups.city,"城市"]];
+  for (const [id,rows,keys,label] of groups) {
+    const table = $(id);
+    const heading = `<thead><tr><th scope="col">${label}</th>${keys.map(key=>`<th class="number" scope="col">${columnNames[key]}</th>`).join("")}</tr></thead>`;
+    const body = rows.map(row=>`<tr><th scope="row">${row.name}</th>${keys.map(key=>{
+      const vintage = {avg:row.avgYear,med:row.med === null ? "" : row.medYear,hours:row.hoursYear ?? "2025 年"}[key];
+      return `<td class="number">${displayValue(row,key)}${vintage ? `<span class="data-vintage">${vintage}</span>` : ""}</td>`;
+    }).join("")}</tr>`).join("");
+    table.innerHTML = `<caption class="sr-only">${label}基礎統計</caption>${heading}<tbody>${body}</tbody>`;
+  }
+}
+
+function renderDomesticHousing() {
+  const taipei = benchmarkByScope.city.officialHousing;
+  $("domestic-housing-body").innerHTML = cities.filter(city=>city.officialHousing).map(city=>
+    `<tr data-benchmark="${city===benchmarkByScope.city}"><th scope="row">${city.name}</th><td class="number">${number(city.officialHousing,2)} 倍</td><td class="number">${percentLabel(city.officialHousing/taipei*100)}</td></tr>`
+  ).join("");
+}
+
+function rowDetail(row,key) {
+  const countryScope = scopeOf(key) === "country";
+  const hasMedian = row.med !== null;
+  const missingMedian = row.wageCity ? `${row.wageCity}無官方年薪中位數` : "缺全國年薪中位數";
+  const countryContext = countryScope ? {avg:`${row.avgYear}。${row.wageBasis}`,med:`${row.medYear}。${row.wageBasis}`,hours:`${row.hoursYear ?? "2025 年"}。${row.hoursBasis}`,hourlyG:hasMedian ? `年薪 ${row.medYear}。2025 工時，${row.hoursBasis}。` : missingMedian,incomeWage:hasMedian ? `2025 年 GNI。年薪 ${row.medYear}。` : missingMedian} : {};
+  const missingHousing = !countryScope && key === "housing" && row.housing === null;
+  const context = missingHousing ? "2026 年中未列。台灣三城另列內政部數據。" : countryContext[key] ?? metrics[key].period;
+  const sourceKey = key === "avg" ? row.avgSource : key === "med" ? row.medSource : key === "hours" ? row.hoursSource : key === "gni" && row.id === "tw" ? "twGni" : metrics[key].source;
+  const source = missingHousing ? ["台灣三城房價所得比","#tw-housing"] : Object.hasOwn(derivedMetrics,key) ? ["計算口徑",`#${metrics[key].method}`] : sources[sourceKey];
+  return {context,source};
+}
+
+function renderTable(key) {
+  const rows = visibleRows(key);
+  const scope = scopeOf(key);
+  const benchmark = benchmarkByScope[scope];
+  const head = `<thead><tr><th scope="col">${scope === "country" ? "國家／地區" : "城市"}</th><th class="number" scope="col">數值</th><th class="number" scope="col">${benchmark.name}＝100%</th><th scope="col">資料期間與口徑</th><th scope="col">來源</th></tr></thead>`;
+  const body = rows.length ? rows.map(row=>{
+    const {context,source} = rowDetail(row,key);
+    const link = source[1].startsWith("#") ? `<a href="${source[1]}">${source[0]}</a>` : anchor(source,"原始資料");
+    return `<tr data-benchmark="${row===benchmark}"><th scope="row">${row.name}</th><td class="number">${displayValue(row,key)}</td><td class="number">${relativeLabel(row,key) || "—"}</td><td class="details-cell">${context}</td><td class="source">${link}</td></tr>`;
+  }).join("") : `<tr><td class="empty-cell" colspan="5">目前沒有選取的資料。</td></tr>`;
+  $(`table-${key}`).innerHTML = `<caption class="sr-only">${metrics[key].title}明細</caption>${head}<tbody>${body}</tbody>`;
+}
+
+function render() {
+  renderControls();
+  for (const key of chartKeys) {
+    renderChart(key);
+    renderTable(key);
+  }
+}
+
+function monthlyBasket() {
+  const profile = basketProfiles[state.profile];
+  const quantities = basketItems.map(({category,quantity}) => quantity * [profile.meals,profile.grocery,1,1][category]);
+  const rows = cities.filter(city=>state.basketRegion === "all" || city.country === state.basketRegion).map(city=>{
+    const parts = [0,0,0,0];
+    basketItems.forEach(({category},index)=>{parts[category] += city.prices[index]*quantities[index];});
+    const total = parts.reduce((sum,amount)=>sum+amount,0);
+    return {city,parts,total,twTotal:total*basketRates[city.country],burden:total/city.netPay*100};
+  });
+  return {profile,quantities,rows};
+}
+
+// ---- 生活困難指數 ----
+const hardship = {housing:"both", view:"city", weights:{pay:1,housing:1,prices:1,hours:1}};
+const pillars = [
+  {key:"pay", name:"低薪", desc:"稅後月薪換成台幣，比台北低多少", formula:"台北月薪 ÷ 當地月薪"},
+  {key:"housing", name:"高房價", desc:"買房或租屋要花掉多少薪水", formula:"房價所得比、租金占月薪"},
+  {key:"prices", name:"高物價", desc:"日常吃飯、交通、帳單占薪水多少", formula:"月消費籃 ÷ 月薪"},
+  {key:"hours", name:"高工時", desc:"一年要工作多少小時", formula:"全國平均年工時"}
+];
+const weightOptions = [[0,"不計"],[0.5,"輕"],[1,"標準"],[2,"重"]];
+const mixedBasketCost = city => basketItems.reduce((sum,{category,quantity},index)=>sum+city.prices[index]*quantity*[basketProfiles.mixed.meals,basketProfiles.mixed.grocery,1,1][category],0);
+
+function cityInputs(city) {
+  const [rent,pricePerSquareMetre] = housingInputs[city.slug];
+  const pay = city.netPay;
+  const country = rowCountry(city);
+  return {payNote:city.payNote, payTwd:pay*basketRates[city.country], rentShare:rent/pay, priceIncome:pricePerSquareMetre*60/(pay*12), basketShare:mixedBasketCost(city)/pay, hours:country.hours, hoursEstimated:country.hoursEstimated};
+}
+
+function cityScores(city) {
+  const x = cityInputs(city);
+  const base = cityInputs(benchmarkByScope.city);
+  const rentRatio = x.rentShare/base.rentShare;
+  const buyRatio = x.priceIncome/base.priceIncome;
+  const ratios = {
+    pay: base.payTwd/x.payTwd,
+    housing: hardship.housing === "rent" ? rentRatio : hardship.housing === "buy" ? buyRatio : Math.sqrt(rentRatio*buyRatio),
+    prices: x.basketShare/base.basketShare,
+    hours: x.hours/base.hours
+  };
+  return {ratios,inputs:x};
+}
+
+function combine(ratios) {
+  const active = pillars.filter(({key})=>hardship.weights[key] > 0);
+  const total = active.reduce((sum,{key})=>sum+hardship.weights[key],0);
+  if (!total) return null;
+  return Math.exp(active.reduce((sum,{key})=>sum+hardship.weights[key]*Math.log(ratios[key]),0)/total);
+}
+
+function geoMean(values) { return Math.exp(values.reduce((sum,value)=>sum+Math.log(value),0)/values.length); }
+
+function hardshipRows(view = hardship.view) {
+  const cityRows = cities.map(city=>{
+    const {ratios,inputs} = cityScores(city);
+    return {id:city.slug, name:city.name, sub:rowCountry(city).name, benchmark:city===benchmarkByScope.city, ratios, inputs, index:combine(ratios)};
+  });
+  if (view === "city") return cityRows;
+  return countries.map(country=>{
+    const members = cityRows.filter(row=>cities.find(city=>city.slug===row.id).country===country.id);
+    const ratios = Object.fromEntries(pillars.map(({key})=>[key,geoMean(members.map(row=>row.ratios[key]))]));
+    return {id:country.id, name:country.name, sub:members.map(row=>row.name).join("、"), benchmark:false, ratios, inputs:null, index:combine(ratios), members:members.length};
+  });
+}
+
+function rawLabel(key,inputs) {
+  if (!inputs) return "";
+  if (key === "pay") return `NT$${number(inputs.payTwd)}／月${inputs.payNote ? `<br>${inputs.payNote}` : ""}`;
+  if (key === "prices") return `占月薪 ${number(inputs.basketShare*100,1)}%`;
+  if (key === "hours") return `${inputs.hoursEstimated ? "約 " : ""}${number(inputs.hours)} 小時／年`;
+  const buy = `房價 ${number(inputs.priceIncome,1)} 年薪`;
+  const rent = `租金占 ${number(inputs.rentShare*100,0)}%`;
+  return hardship.housing === "buy" ? buy : hardship.housing === "rent" ? rent : `${buy} · ${rent}`;
+}
+
+const scoreClass = value => value > 102 ? "score-up" : value < 98 ? "score-down" : "score-base";
+
+const stressWords = {pay:"薪水低",housing:"住房貴",prices:"物價占薪資高",hours:"工時長"};
+const reliefWords = {pay:"薪水高",housing:"住房便宜",prices:"物價占薪資低",hours:"工時短"};
+
+function drivers(row) {
+  const active = pillars.filter(({key})=>hardship.weights[key] > 0);
+  const stress = active.filter(({key})=>row.ratios[key] > 1.02).sort((a,b)=>row.ratios[b.key]-row.ratios[a.key]).map(({key})=>stressWords[key]);
+  const relief = active.filter(({key})=>row.ratios[key] < 0.98).sort((a,b)=>row.ratios[a.key]-row.ratios[b.key]).map(({key})=>reliefWords[key]);
+  return {stress,relief};
+}
+
+function mainDriver(row) {
+  if (row.benchmark) return "基準城市";
+  const {stress,relief} = drivers(row);
+  const parts = [];
+  if (stress.length) parts.push(`壓力：${stress.slice(0,2).join("、")}`);
+  if (relief.length) parts.push(`優勢：${relief.slice(0,2).join("、")}`);
+  return parts.join(" ／ ") || "與台北相近";
+}
+
+function renderHardshipCards() {
+  const rows = hardshipRows("city").filter(row=>row.index !== null).sort((a,b)=>b.index-a.index);
+  if (!rows.length) { $("hardship-cards").innerHTML = ""; return; }
+  const hardest = rows[0];
+  const easiest = rows.at(-1);
+  const rank = rows.findIndex(row=>row.benchmark)+1;
+  const harder = rows.filter(row=>row.index*100 >= 102);
+  const card = (label,value,unit,note) => `<button class="quick" type="button" data-jump="difficulty"><span class="quick-name">${label}</span><strong>${value} <small>${unit}</small></strong><span class="quick-link">${note}</span></button>`;
+  $("hardship-cards").innerHTML = [
+    card("最吃力的城市",number(hardest.index*100),hardest.name,drivers(hardest).stress.slice(0,2).join("、") || "各面向接近台北"),
+    card("最輕鬆的城市",number(easiest.index*100),easiest.name,drivers(easiest).relief.slice(0,2).join("、") || "各面向接近台北"),
+    card("台北的位置",`第 ${rank}`,`／ ${rows.length} 城`,"由最吃力往下排 · 台北＝100"),
+    card("比台北辛苦的城市",harder.length,"座",harder.map(row=>row.name).join("、") || "沒有")
+  ].join("");
+}
+
+function renderHardship() {
+  $("hardship-view").querySelectorAll("button").forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.view === hardship.view)));
+  const rows = hardshipRows().sort((a,b)=>(b.index ?? 0)-(a.index ?? 0));
+  if (rows.every(row=>row.index === null)) {
+    $("hardship-chart").innerHTML = '<p class="chart-empty">請至少保留一個面向的權重。</p>';
+    $("hardship-body").innerHTML = "";
+    $("hardship-summary").textContent = "";
+    return;
+  }
+  const max = Math.max(100,...rows.map(row=>row.index*100));
+  const percent = value => `${value/max*100}%`;
+  $("hardship-chart").innerHTML = rows.map(row=>{
+    const score = row.index*100;
+    const tone = Math.abs(score-100) < 2 ? "base" : score > 100 ? "harder" : "easier";
+    return `<div class="hs-row" data-benchmark="${row.benchmark}"><span class="hs-name">${row.name}<small>${row.sub}</small></span><span class="track" aria-hidden="true"><span class="bar ${tone}" style="--width:${percent(score)}"></span><span class="baseline-marker" style="--start:${percent(100)}"></span></span><span class="hs-value">${number(score)}</span></div>`;
+  }).join("");
+
+  const hardest = rows[0];
+  const easiest = rows.at(-1);
+  const taiwanNote = hardship.view === "country" ? "國家分數為所含城市的幾何平均，基準仍是台北＝100。" : "台北＝100。";
+  const hardWhy = drivers(hardest).stress.slice(0,2).join("、") || "各面向接近台北";
+  const easyWhy = drivers(easiest).relief.slice(0,2).join("、") || "各面向接近台北";
+  $("hardship-summary").textContent = `${taiwanNote}最吃力的是${hardest.name}（${number(hardest.index*100)}），主因是${hardWhy}；最輕鬆的是${easiest.name}（${number(easiest.index*100)}），主因是${easyWhy}。`;
+  renderHardshipCards();
+
+  $("hardship-head").innerHTML = `<tr><th scope="col">${hardship.view === "city" ? "城市" : "國家"}</th><th class="number" scope="col">綜合指數</th>${pillars.map(({key,name})=>`<th class="number" scope="col">${name}${hardship.weights[key] === 0 ? "（不計）" : ""}</th>`).join("")}<th scope="col">解讀</th></tr>`;
+  $("hardship-body").innerHTML = rows.map(row=>{
+    const cells = pillars.map(({key})=>{
+      const score = row.ratios[key]*100;
+      return `<td class="number"><span class="score ${scoreClass(score)}">${number(score)}</span><span class="raw">${rawLabel(key,row.inputs)}</span></td>`;
+    }).join("");
+    const total = row.index*100;
+    return `<tr data-benchmark="${row.benchmark}"><th scope="row">${row.name}<span class="raw">${row.sub}</span></th><td class="number"><span class="score ${scoreClass(total)}">${number(total)}</span></td>${cells}<td class="driver">${mainDriver(row)}</td></tr>`;
+  }).join("");
+}
+
+function buildHardship() {
+  $("pillar-legend").innerHTML = pillars.map(({name,desc,formula})=>`<div class="pillar"><b>${name}</b><span>${desc}</span><em>${formula}</em></div>`).join("");
+  $("hardship-weights").innerHTML = pillars.map(({key,name})=>`<label for="weight-${key}">${name}<select id="weight-${key}" data-weight="${key}">${weightOptions.map(([value,label])=>`<option value="${value}"${value === 1 ? " selected" : ""}>${label}</option>`).join("")}</select></label>`).join("");
+  $("pay-table").innerHTML = `<caption class="sr-only">各城市薪資來源與稅後估算</caption><thead><tr><th scope="col">城市</th><th class="number" scope="col">稅前月薪</th><th class="number" scope="col">稅後月薪（估）</th><th class="number" scope="col">實拿比例</th><th class="number" scope="col">稅後換台幣</th><th scope="col">口徑</th><th scope="col">來源</th></tr></thead><tbody>${cities.map(city=>`<tr><th scope="row">${city.name}</th><td class="number">${countryById.get(city.country).money}${number(city.grossPay)}</td><td class="number">${countryById.get(city.country).money}${number(city.netPay)}</td><td class="number">${Math.round(city.netPay/city.grossPay*100)}%</td><td class="number">NT$${number(city.netPay*basketRates[city.country])}</td><td class="details-cell">${city.payBasis}</td><td class="source">${anchor(sources[city.paySource])}</td></tr>`).join("")}</tbody>`;
+  $("difficulty-sources").innerHTML = [anchor(sources.cost),anchor(sources.housing),anchor(sources.hours),...cities.map(city=>anchor([city.name,`https://www.numbeo.com/cost-of-living/in/${city.slug}`]))].join("");
+  $("hardship-weights").addEventListener("change",event=>{
+    const key = event.target.dataset.weight;
+    if (!key) return;
+    hardship.weights[key] = Number(event.target.value);
+    renderHardship();
+  });
+  $("hardship-housing").addEventListener("change",event=>{hardship.housing=event.target.value;renderHardship();});
+  $("hardship-view").addEventListener("click",event=>{
+    const view = event.target.closest("button")?.dataset.view;
+    if (!view || view === hardship.view) return;
+    hardship.view = view;
+    renderHardship();
+  });
+}
+
+function renderBasket() {
+  $("basket-currency").querySelectorAll("button").forEach(button => button.setAttribute("aria-pressed",String(button.dataset.basket === state.basket)));
+  $("basket-profile").querySelectorAll("button").forEach(button => button.setAttribute("aria-pressed",String(button.dataset.profile === state.profile)));
+  const {profile,quantities,rows} = monthlyBasket();
+  const reference = rows.find(row=>row.city===benchmarkByScope.city);
+  if (state.basketSort === "cost") rows.sort((a,b)=>a.twTotal-b.twTotal);
+  if (state.basketSort === "burden") rows.sort((a,b)=>a.burden-b.burden);
+
+  const money = (city,amount) => state.basket === "twd" ? `NT$${number(amount*basketRates[city.country])}` : `${rowCountry(city).money}${amount.toLocaleString("zh-TW",{maximumFractionDigits:2})}`;
+  const priceCell = (city,amount,base,className="") => `<td class="number ${className}">${money(city,amount)}<span class="relative-value">${percentLabel(amount*basketRates[city.country]/base*100)}</span></td>`;
+  $("basket-body").innerHTML = rows.map(({city,parts,total,burden})=>`<tr data-benchmark="${city===reference.city}"><th scope="row">${city.name}</th>${parts.map((amount,index)=>priceCell(city,amount,reference.parts[index])).join("")}${priceCell(city,total,reference.total,"basket-total")}<td class="number basket-burden">${number(burden,1)}%</td></tr>`).join("");
+  const lowestCost = rows.reduce((lowest,row)=>row.twTotal < lowest.twTotal ? row : lowest);
+  const highestBurden = rows.reduce((highest,row)=>row.burden > highest.burden ? row : highest);
+  $("basket-quantities").textContent = `每月 ${profile.meals} 餐、${quantities[7]} 趟單程、一份水電及網路帳單。食材：白米 ${quantities[1]} kg、牛奶 ${quantities[2]} L、雞蛋 ${quantities[3]*12} 顆、雞肉／蘋果／番茄各 ${quantities[4]} kg。`;
+  $("basket-insight").textContent = `此情境下，${lowestCost.city.name}的月支出最低（${money(lowestCost.city,lowestCost.total)}），${highestBurden.city.name}的薪資負擔最高（${number(highestBurden.burden,1)}%）。台北的薪資負擔為 ${number(reference.burden,1)}%。`;
+  $("basket-items").innerHTML = `<caption class="sr-only">城市單項價格及當地平均稅後月薪</caption><thead><tr><th scope="col">城市</th>${basketItems.map(({label})=>`<th class="number" scope="col">${label}</th>`).join("")}<th class="number" scope="col">稅後月均薪</th><th scope="col">來源</th></tr></thead><tbody>${rows.map(({city})=>`<tr data-benchmark="${city===reference.city}"><th scope="row">${city.name}</th>${city.prices.map((amount,index)=>priceCell(city,amount,reference.city.prices[index])).join("")}<td class="number">${money(city,city.netPay)}${city.payNote ? `<span class="data-vintage">${city.payNote}</span>` : ""}</td><td class="source">${anchor([city.name,`https://www.numbeo.com/cost-of-living/in/${city.slug}`],"城市價格")}</td></tr>`).join("")}</tbody>`;
+}
+
+let viewerDownloads = null;
+if (window.claude?.use) window.claude.use("downloads").then(namespace=>{viewerDownloads = namespace;}).catch(()=>{});
+
+function downloadCsv() {
+  const quote = value => `"${String(value).replaceAll('"','""')}"`;
+  const block = scope => {
+    const keys = metricGroups[scope];
+    const compareTo = benchmarkByScope[scope].name;
+    const base = scope === "country" ? countries : cities;
+    const header = [...(scope === "country" ? ["國家／地區"] : ["城市","國家／地區"]),...keys.flatMap(key=>[columnNames[key],`${columnNames[key]}（${compareTo}＝100%）`])];
+    const body = base.filter(row=>state.filters.has(rowCountry(row).id)).map(row=>[...(scope === "country" ? [row.name] : [row.name,rowCountry(row).name]),...keys.flatMap(key=>[displayValue(row,key),relativeLabel(row,key)])]);
+    return [header,...body];
+  };
+  const rows = [...block("country"),[],...block("city")];
+  const csv = '\uFEFF'+rows.map(row=>row.map(quote).join(",")).join("\r\n");
+  const filename = "asia-comparison.csv";
+  if (viewerDownloads) {
+    viewerDownloads.save({filename,data:csv}).catch(error=>{
+      if (!["declined","rate_limited"].includes(error?.code)) $("export").textContent = "此環境無法下載";
+    });
+    return;
+  }
+  const url = URL.createObjectURL(new Blob([csv],{type:"text/csv;charset=utf-8"}));
+  const link = document.createElement("a");
+  link.href=url;
+  link.download=filename;
+  link.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+$("filters").innerHTML = countries.map(country=>`<button type="button" data-country="${country.id}" aria-pressed="true">${country.name}</button>`).join("");
+$("method-list").innerHTML = methodology.map(([id,title,copy,links])=>`<details id="${id}"><summary>${title}</summary><p>${copy}</p>${links.length ? `<ul>${links.map(key=>`<li>${anchor(sources[key])}</li>`).join("")}</ul>` : ""}</details>`).join("");
+
+buildCharts();
+$("filters").addEventListener("click",event=>{
+  const id=event.target.closest("button")?.dataset.country;
+  if (!id) return;
+  if (state.filters.has(id)) state.filters.delete(id); else state.filters.add(id);
+  render();
+});
+$("reset").addEventListener("click",()=>{state.filters=new Set(countries.map(country=>country.id));render();});
+$("sort").addEventListener("change",event=>{state.sort=event.target.value;render();});
+$("chart-view").addEventListener("change",event=>{state.view=event.target.value;render();});
+$("currency").addEventListener("change",event=>{state.currency=event.target.value;renderBaseTables();render();});
+$("basket-currency").addEventListener("click",event=>{
+  const next=event.target.closest("button")?.dataset.basket;
+  if (!next) return;
+  state.basket=next;
+  renderBasket();
+});
+$("basket-profile").addEventListener("click",event=>{
+  const next=event.target.closest("button")?.dataset.profile;
+  if (!next) return;
+  state.profile=next;
+  renderBasket();
+});
+$("basket-sort").addEventListener("change",event=>{state.basketSort=event.target.value;renderBasket();});
+$("basket-region").addEventListener("change",event=>{state.basketRegion=event.target.value;renderBasket();});
+document.addEventListener("click",event=>{
+  const id = event.target.closest('a[href^="#"]')?.getAttribute("href").slice(1);
+  const target = id && document.getElementById(id);
+  if (target?.tagName === "DETAILS") target.open=true;
+});
+$("export").addEventListener("click",downloadCsv);
+$("hardship-cards").addEventListener("click",event=>{
+  if (!event.target.closest("[data-jump]")) return;
+  $("difficulty-title").setAttribute("tabindex","-1");
+  $("difficulty-title").focus({preventScroll:true});
+  $("difficulty").scrollIntoView({block:"start"});
+});
+
+render();
+renderBaseTables();
+renderDomesticHousing();
+renderBasket();
+buildHardship();
+renderHardship();
+const initialDetails = document.getElementById(location.hash.slice(1));
+if (initialDetails?.tagName === "DETAILS") initialDetails.open=true;
+window.addEventListener("hashchange",()=>{
+  const target = document.getElementById(location.hash.slice(1));
+  if (target?.tagName === "DETAILS") target.open=true;
+});
+</script>
+</body>
+</html>
